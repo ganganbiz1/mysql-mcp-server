@@ -1,0 +1,15 @@
+services:
+  mcp-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - MYSQL_HOST=host.docker.internal
+      - MYSQL_PORT=3306
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=password
+      - MYSQL_DATABASE=mcpdb
+      - HOST=0.0.0.0
+      - PORT=8000
+    ports:
+      - "8000:8000"

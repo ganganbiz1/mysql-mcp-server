@@ -3,7 +3,7 @@ name = "mysql-mcp-server"
 version = "0.1.0"
 description = "MySQL MCP Server implementation with FastMCP"
 authors = [
-    {name = "Your Name",email = "your.email@example.com"}
+    {name = "Your Name",email = "sample@sample.com"}
 ]
 readme = "README.md"
 requires-python = "^3.10"
@@ -14,12 +14,6 @@ dependencies = [
 ]
 
 [tool.poetry]
-
-[tool.poetry.group.dev.dependencies]
-pytest = "^7.3.1"
-black = "^23.3.0"
-isort = "^5.12.0"
-flake8 = "^6.0.0"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]

@@ -1,4 +1,4 @@
-FROM python:3.10-slim
+FROM python:3.13-slim
 
 WORKDIR /app
 
@@ -26,4 +26,4 @@ ENV PORT=8000
 EXPOSE 8000
 
 # Command to run the application
-CMD ["python", "-m", "server.main"] 
+CMD ["python", "-m", "server.main"]  

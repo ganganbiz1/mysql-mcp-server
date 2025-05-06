@@ -6,7 +6,7 @@ authors = [
     {name = "Your Name",email = "sample@sample.com"}
 ]
 readme = "README.md"
-requires-python = "^3.10"
+requires-python = "^3.13"
 dependencies = [
     "fastmcp (>=2.0.0,<3.0.0)",
     "mysql-connector-python (>=8.0.33,<9.0.0)",

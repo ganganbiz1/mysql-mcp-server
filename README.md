@@ -25,7 +25,7 @@ The server provides the following MCP tools:
 
 - Docker and docker-compose
 - Poetry (for local development)
-- Python 3.10+
+- Python 3.13+
 
 ### Environment Variables
 

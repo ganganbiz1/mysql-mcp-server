@@ -25,68 +25,7 @@ The server provides the following MCP tools:
 
 - Docker and docker-compose
 - Poetry (for local development)
-- Python 3.10+
-
-### Environment Variables
-
-Copy the example environment file:
-
-```bash
-cp env.example .env
-```
-
-Modify the values as needed.
-
-### Running with Docker Compose
-
-To start both MySQL and the MCP server:
-
-```bash
-docker-compose up
-```
-
-This will:
-1. Start a MySQL 8.0 container
-2. Wait for MySQL to be healthy
-3. Start the MCP server connected to the MySQL instance
-
-### Local Development
-
-1. Install dependencies:
-
-```bash
-poetry install
-```
-
-2. Run the server:
-
-```bash
-poetry run python -m server.main
-```
-
-## Usage Examples
-
-### Executing a Query
-
-```json
-{
-  "name": "execute_query",
-  "arguments": {
-    "query": "SELECT * FROM users WHERE id = 1"
-  }
-}
-```
-
-### Getting Table Schema
-
-```json
-{
-  "name": "get_table_schema",
-  "arguments": {
-    "table_name": "users"
-  }
-}
-```
+- Python 3.13+
 
 ## Cursor Integration
 
@@ -111,10 +50,6 @@ To integrate with Cursor, add the following to your `~/.cursor/mcp.json` file:
         "MYSQL_PASSWORD",
         "-e",
         "MYSQL_DATABASE",
-        "-e",
-        "HOST",
-        "-e",
-        "PORT",
         "mysql-mcp-server"
       ],
       "env": {
@@ -122,9 +57,7 @@ To integrate with Cursor, add the following to your `~/.cursor/mcp.json` file:
         "MYSQL_PORT": "3306",
         "MYSQL_USER": "root",
         "MYSQL_PASSWORD": "password",
-        "MYSQL_DATABASE": "mcpdb",
-        "HOST": "0.0.0.0",
-        "PORT": "8000"
+        "MYSQL_DATABASE": "mcpdb"
       }
     }
   }

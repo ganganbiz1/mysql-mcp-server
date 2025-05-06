@@ -46,7 +46,7 @@ async def lifespan(app: FastMCP) -> AsyncIterator[None]:
     logger.info("MySQL connection closed")
 
 # Initialize FastMCP app with lifespan
-mcp = FastMCP("MySQL MCP Server")
+mcp = FastMCP("MySQL MCP Server", lifespan=lifespan)
 
 
 @mcp.tool()

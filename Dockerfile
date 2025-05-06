@@ -3,16 +3,16 @@ FROM python:3.10-slim
 WORKDIR /app
 
 # Install poetry
-RUN pip install poetry==1.4.2
+RUN pip install poetry==2.1.3
 
-# Copy poetry configuration files
-COPY pyproject.toml ./
+# Copy poetry configuration files and README
+COPY pyproject.toml README.md ./
 
 # Configure poetry to not use a virtual environment in the container
 RUN poetry config virtualenvs.create false
 
 # Install dependencies
-RUN poetry install --only main
+RUN poetry install --only main --no-root
 
 # Copy application code
 COPY . .
